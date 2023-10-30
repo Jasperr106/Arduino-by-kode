@@ -5,23 +5,17 @@ Servo myservo;
 int pos = 0;
 
 void setup() {
-  // The servo control wire is connected to Arduino D2 pin.
   myservo.attach(2);
-  // Servo is stationary.
   myservo.write(90);
 }
 
 void loop() {
-  // Servo spins forward at full speed for 1 second.
   myservo.write(180);
-  delay(3000opi);
-  // Servo is stationary for 1 second.
+  delay(5000);  // motoren spinner mot klokka i 5 sekunder
   myservo.write(90);
-  delay(3000);
-  // Servo spins in reverse at full speed for 1 second.
+  delay(1000); // motoren står stille i et sekund
   myservo.write(0);
-  delay(3000);
-  // Servo is stationary for 1 second.
+  delay(5000); // motoren spinner med klokka i 5 sekunder
   myservo.write(90);
   delay(1000);
 }
